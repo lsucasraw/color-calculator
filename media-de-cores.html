@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculo de cores</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Calculadora de média de cores</h1>
+    <form id="colorForm" class="form-inline">
+      <div class="form-group mb-2">
+        <label for="color1" class="sr-only">Cor 1</label>
+        <input type="text" class="form-control" id="color1" placeholder="Enter first color (e.g., #FF0000)" oninput="updateColorDisplay(1)">
+        <div id="colorDisplay1" class="color-circle ml-2"></div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="color2" class="sr-only">Cor 2</label>
+        <input type="text" class="form-control" id="color2" placeholder="Enter second color (e.g., #FFFFFF)" oninput="updateColorDisplay(2)">
+        <div id="colorDisplay2" class="color-circle ml-2"></div>
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="numColors" class="sr-only">Quantidade</label>
+        <select class="form-control" id="numColors">
+          <option value="" disabled selected>Selecione a quantidade</option>
+          <script src="dropdown_options.js"></script>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary mb-2" onclick="calculateIntermediateColors()">Calcular cores</button>
+    </form>
+    <div id="result" class="mt-4">
+      <p id="averageColorText"></p>
+      <div id="colorList"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

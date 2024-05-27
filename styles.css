@@ -1,0 +1,135 @@
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .color-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .color-item span {
+    margin-left: 10px;
+  }
+  
+  .color-column {
+    float: left; /* Para alinhar as colunas horizontalmente */
+    margin-right: 20px; /* Adicione margem entre as colunas */
+  }
+  
+  @media (max-width: 768px) {
+    .color-column {
+      float: none; /* Remova o float em telas menores para empilhar as colunas */
+      margin-right: 0; /* Remova a margem */
+      margin-bottom: 20px; /* Adicione uma margem inferior para espaçamento */
+    }
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .logo img {
+    max-width: 200px;
+  }
+  
+  .platform-name {
+    margin-top: 10px;
+  }
+  
+  .main {
+    padding: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .option-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .option-card h2 {
+    font-size: 1.5em;
+  }
+  
+  .option-card p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .color-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color-hex {
+  text-align: center;
+  margin-top: 10px;
+}
+  
+.copy-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+}
+
+.color-box:hover .copy-overlay {
+  display: flex;
+}

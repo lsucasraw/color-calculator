@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Color Palette Generator</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="baseColor">Base Color (Hex):</label>
+                    <input type="text" class="form-control" id="baseColor" placeholder="Enter base color (e.g., #FF0000)">
+                    <div id="baseColorDisplay" class="color-circle mt-2"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="colorMode">Color Mode:</label>
+                    <select class="form-control" id="colorMode">
+                        <option value="complementary">Complementary</option>
+                        <option value="triadic">Triadic</option>
+                        <option value="analogous">Analogous</option>
+                        <option value="tetradic">Tetradic</option>
+                        <option value="square">Square</option>
+                        <option value="rectangular">Rectangular</option>
+                        <option value="golden ratio">Golden Ratio</option>
+                        <option value="monochromatic">Monochromatic</option>
+                        <option value="tints">Tints</option>
+                        <option value="shades">Shades</option>
+                        <option value="grayscale">Grayscale</option>
+                        <option value="split_complementary">Split Complementary</option>
+                        <option value="duotone">Duotone</option>
+                        <option value="acromatic">Achromatic</option>
+                        <option value="rainbow">Rainbow Hues</option>
+                        <!-- Adicione mais modos de cores aqui, se necessário -->
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button id="generatePaletteBtn" class="btn btn-primary mt-4">Generate Palette</button>
+            </div>
+        </div>
+        <div id="palette" class="row mt-5"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
